@@ -190,6 +190,10 @@ h6 {
   margin-bottom: -300px;
 }
 
+#hero .vote-space {
+  margin-bottom: 80px;
+}
+
 #hero .container,
 #hero .container-fluid {
   padding-top: 10px;
@@ -238,6 +242,7 @@ h6 {
   letter-spacing: 1px;
   transition: 0.4s;
 }
+
 
 #hero .btn-get-started:hover {
   background-color: rgba(213, 143, 39, 0.629);
@@ -489,12 +494,6 @@ section {
   height: 110px;
 }
 
-.services .icon-box .icon svg {
-  color: #f5deb3;
-  font-size: 36px;
-  transition: 0.3s;
-}
-
 .services .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
@@ -504,6 +503,44 @@ section {
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   transition: ease-in-out 0.3s;
+}
+
+.services .icon-box .vote {
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 8px;
+  margin-bottom: 20px;
+  background-image: linear-gradient(-60deg, #ffa658 0%, #f09819 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  transition: ease-in-out 0.3s;
+}
+
+.services .vote-button {
+  backdrop-filter: blur(4px);
+  background-color: rgba(213, 143, 39, 0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border-color: #e3c24a;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  margin: 5px;
+  padding: 2px 15px;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  transition: 0.4s;
+}
+
+
+.services .vote-button:hover {
+  background-color: rgba(213, 143, 39, 0.629);
+  color: #dddddd;
+  border-radius: 50px;
+  transition: all ease-in-out 0.4s;
 }
 
 #footer {
