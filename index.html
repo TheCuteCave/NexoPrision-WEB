@@ -30,7 +30,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link active" href="#hero">INICIO</a></li>
-          <li><a class="nav-link" href="#">TIENDA</a></li>
+          <li><a class="nav-link" href="https://nexopvp.tebex.io">TIENDA</a></li>
           <li><a class="nav-link" href="#">VOTAR</a></li>
           <li><a class="nav-link " href="#">STAFF</a></li>
         </ul>
@@ -42,10 +42,10 @@
 
   <section id="hero" class="d-flex align-items-center">
 
-    <div class="container-fluid" data-aos="fade-up">
+    <div class="container-fluid">
       <div class="row justify-content-center espacio">
 
-        <div class="col-xl-4 col-lg-6 order-1 hero-img" data-aos="zoom-in" data-aos-delay="150">
+        <div class="col-xl-4 col-lg-6 order-1 hero-img">
           <img src="assets/img/logo/Main-Logo.png" class="img-fluid animated" alt="">
         </div>
 
@@ -53,8 +53,9 @@
           <h1>UNA <span class="resaltar">NUEVA</span> GRAN EXPERIENCIA EN <br><span class="resaltar">PRISION</span> PVP
           </h1>
           <div>
-            <a href="#about" class="btn-get-started scrollto">Discord</a>
-            <a href="#about" class="btn-get-started scrollto">Copiar IP</a>
+            <a href="discord.gg/qRy2P9xayK" target="_blank" class="btn-get-started scrollto">Discord</a>
+            <button id="button-ip" class="ip" onclick="copyToClipboard('#ip')">Copiar IP</button>
+
           </div>
         </div>
 
@@ -76,7 +77,8 @@
                 Puedes obtener cajas, tesoros y poder destacar con un rango con beneficios
               </p>
               <div class="text-center">
-                <a href="#" class="more-btn">Ir a la Tienda <i class="bx bx-chevron-right"></i></a>
+                <a href="https://nexopvp.tebex.io" target="_blank" class="more-btn">Ir a la Tienda <i
+                    class="bx bx-chevron-right"></i></a>
               </div>
             </div>
           </div>
@@ -86,19 +88,22 @@
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-5">
                     <h4>NEXO PLUS</h4>
-                    <img src="assets/img/tienda/nexo-plus.png" alt="">
+                    <a href="https://nexopvp.tebex.io/category/rangos" target="_blank"><img
+                        src="assets/img/tienda/nexo-plus.png" alt=""></a>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-5">
                     <h4>Cofre Tokens</h4>
-                    <img src="assets/img/tienda/Tesoro.png" alt="">
+                    <a href="https://nexopvp.tebex.io/category/tesoros" target="_blank"> <img
+                        src="assets/img/tienda/Tesoro.png" alt=""></a>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-5">
                     <h4>Caja Multiverso</h4>
-                    <img src="assets/img/tienda/Cajas.png" alt="">
+                    <a href="https://nexopvp.tebex.io/category/cajas" target="_blank"><img
+                        src="assets/img/tienda/Cajas.png" alt=""></a>
                   </div>
                 </div>
               </div>
@@ -115,15 +120,13 @@
         <div class="row counters justify-content-center">
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-              class="purecounter"></span>
-            <p>Jugadores activos en Minecraft</p>
+            <span data-playercounter-ip="nexopvp.com" data-playercounter-format="{online}"></span>
+            <p>Jugadores <span>activos</span> en Minecraft</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-              class="purecounter"></span>
-            <p>Juegadores activos en Discord</p>
+            <span id="discordNumero"></span>
+            <p>Juegadores <span>activos</span> en Discord</p>
           </div>
 
         </div>
@@ -132,69 +135,148 @@
     </section>
 
     <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
+      <div class="container">
 
         <div class="row">
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Buen Knockback</a></h4>
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sword" width="44"
+                  height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f5deb3" fill="none" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M20 4v5l-9 7l-4 4l-3 -3l4 -4l7 -9z" />
+                  <path d="M6.5 11.5l6 6" />
+                </svg>
+              </div>
+              <h4>Buen Knockback</h4>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
-            data-aos-delay="200">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Conexion estable</a></h4>
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-wifi" width="44" height="44"
+                  viewBox="0 0 24 24" stroke-width="1.5" stroke="#f5deb3" fill="none" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 18l.01 0" />
+                  <path d="M9.172 15.172a4 4 0 0 1 5.656 0" />
+                  <path d="M6.343 12.343a8 8 0 0 1 11.314 0" />
+                  <path d="M3.515 9.515c4.686 -4.687 12.284 -4.687 17 0" />
+                </svg>
+              </div>
+              <h4>Conexion estable</h4>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
-            data-aos-delay="300">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Gran Comunidad</a></h4>
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="44"
+                  height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f5deb3" fill="none" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                  <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                </svg>
+              </div>
+              <h4>Gran Comunidad</h4>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
-            data-aos-delay="400">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4><a href="">Eventos</a></h4>
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-gamepad-2" width="44"
+                  height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f5deb3" fill="none" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 5h3.5a5 5 0 0 1 0 10h-5.5l-4.015 4.227a2.3 2.3 0 0 1 -3.923 -2.035l1.634 -8.173a5 5 0 0 1 4.904 -4.019h3.4z" />
+                  <path d="M14 15l4.07 4.284a2.3 2.3 0 0 0 3.925 -2.023l-1.6 -8.232" />
+                  <path d="M8 9v2" />
+                  <path d="M7 10h2" />
+                  <path d="M14 10h2" />
+                </svg>
+              </div>
+              <h4>Eventos</h4>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">No Pay to win</a></h4>
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mood-dollar" width="44"
+                  height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f5deb3" fill="none" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M20.87 10.48a9 9 0 1 0 -7.876 10.465" />
+                  <path d="M9 10h.01" />
+                  <path d="M15 10h.01" />
+                  <path d="M9.5 15c.658 .64 1.56 1 2.5 1c.357 0 .709 -.052 1.043 -.151" />
+                  <path d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" />
+                  <path d="M19 21v1m0 -8v1" />
+                </svg>
+              </div>
+              <h4>No Pay to win</h4>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
-            data-aos-delay="200">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Actualizaciones</a></h4>
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rotate-clockwise-2"
+                  width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f5deb3" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M9 4.55a8 8 0 0 1 6 14.9m0 -4.45v5h5" />
+                  <path d="M5.63 7.16l0 .01" />
+                  <path d="M4.06 11l0 .01" />
+                  <path d="M4.63 15.1l0 .01" />
+                  <path d="M7.16 18.37l0 .01" />
+                  <path d="M11 19.94l0 .01" />
+                </svg>
+              </div>
+              <h4>Actualizaciones</h4>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
-            data-aos-delay="300">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Gran Soporte</a></h4>
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-headset" width="44"
+                  height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f5deb3" fill="none" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M4 14v-3a8 8 0 1 1 16 0v3" />
+                  <path d="M18 19c0 1.657 -2.686 3 -6 3" />
+                  <path d="M4 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3z" />
+                  <path d="M15 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3z" />
+                </svg>
+              </div>
+              <h4>Gran Soporte</h4>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
-            data-aos-delay="400">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4><a href="">Calidad</a></h4>
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart-handshake" width="44"
+                  height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f5deb3" fill="none" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                  <path
+                    d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25" />
+                  <path d="M12.5 15.5l2 2" />
+                  <path d="M15 13l2 2" />
+                </svg>
+              </div>
+              <h4>Calidad</h4>
             </div>
           </div>
 
@@ -223,16 +305,19 @@
       </div>
 
     </div>
+    <ip id="ip">nexopvp.com</ip>
   </footer>
 
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/discord-counts.js"></script>
+  <script src="assets/js/copytext.js"></script>
 
 </body>
 
